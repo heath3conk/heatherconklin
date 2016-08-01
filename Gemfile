@@ -28,6 +28,9 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'bootstrap-sass', '~> 3.2.0'
 
+# required for the 'normalize.css' to work with Sass
+gem 'support-for', '~> 1.0'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
