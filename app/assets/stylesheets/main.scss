@@ -1,0 +1,103 @@
+
+$font-stack: Source Sans Pro, sans-serif;
+$main-background-color: #fff9ef;
+$main-font-color: #151540;
+$dark-contrast-color: #7f1f0e;
+$light-contrast-color: #e58e81;
+
+body {
+  background: $main-background-color url("parade.jpg") no-repeat center top;
+  font: 100% $font-stack;
+  color: $main-font-color;
+}
+
+/*  Overall color palette, inspired by william morris:
+  dark blue = #151540
+    shades of #2a2a7f, #5454ff, #4b4be5
+  orangy-red = #7f1f0e
+    shades of #ff3e1c, #401007, #e53819
+  lighter orangy-red = #e58e81
+  neutral background(cream) = fff9ef
+  olive green = #284015
+    shades of #9fff7a, #457f3d, #8fe56f, #507f3e
+*/
+
+.nav-bar {
+  margin-top: 3%;
+}
+
+.nav-link {
+  font-size: 20px;
+  color: $light-contrast-color;
+  transition-property: color, font-size, font-weight;
+  transition-duration: .5s;
+}
+
+.nav-link:hover {
+  color: #e53819;
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.content-link {
+  color: $dark-contrast-color;
+}
+
+.content-link:hover {
+  color: $dark-contrast-color;
+  text-decoration: none;
+}
+
+.footer-bar {
+  position: absolute;
+  bottom: 20px;
+  background: $light-contrast-color;
+  height: 12%;
+  width: 100%;
+  padding-top: 1%; 
+}
+
+.foot-link {
+  color: $main-font-color;
+  font-size: 20px;
+  transition-property: color, font-size, font-weight;
+  transition-duration: .5s;
+}
+
+.foot-link:hover {
+  color: $dark-contrast-color;
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.foot-link:visited {
+  color: $main-font-color;
+  font-size: 20px;
+}
+
+.name {
+  font-size: 40px;
+  color: $light-contrast-color;
+  text-shadow: 2px 2px $dark-contrast-color;
+  text-align: center;
+}
+.info {
+  background-color: $main-background-color;
+  color: $main-font-color;
+  height: 15%;
+  width: 80%;
+  position: absolute;
+  bottom: 80px;
+  text-align: center;
+  margin-left: 10%;
+  margin-bottom: 2%;
+  padding: 5px;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.bio {
+  font-size: 25px;
+}

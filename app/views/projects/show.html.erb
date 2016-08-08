@@ -1,0 +1,7 @@
+<div class="project-specifics">
+  <h2><%= @project.title %></h2>
+  <h3><%= link_to "#{@project.repo}", "#{@project.repo}", class: "content-link" %></h3>
+  <h3><span style="font-weight:bold">Primary technologies used: </span><%= @project.technologies %></h3>
+
+  <%= render partial: "#{@project.page_reference}" %>
+</div>

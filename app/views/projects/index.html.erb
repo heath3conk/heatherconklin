@@ -1,0 +1,18 @@
+ <div class="carousel"> 
+  <div class="content-list">
+    <% @projects.each do | project | %>
+      <div class="project row">
+        <div class="project-image col-xs-2 col-sm-2 col-md-2 col-lg-2">
+          <%= image_tag("#{project.screenshot}", class: "image-#{project.screenshot_orientation}") %>
+        </div>
+        <div class="project-info col-xs-10 col-sm-10 col-md-10 col-lg-10" >
+          <h2><%= link_to "#{project.title}", projects_show_path(project), class: "content-link"  %></h2>
+          <p><%= project.short_description %></p>
+          <p><%= project.technologies %></p>
+          <p><%= link_to "#{project.repo}", "#{project.repo}", class: "content-link" %></p>
+        </div>
+
+      </div>
+    <% end %>
+  </div>
+</div>

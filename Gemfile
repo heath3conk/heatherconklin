@@ -31,6 +31,9 @@ gem 'bootstrap-sass', '~> 3.2.0'
 # required for the 'normalize.css' to work with Sass
 gem 'support-for', '~> 1.0'
 
+# include slick carousel 
+gem 'jquery-slick-rails', '~> 1.5', '>= 1.5.9.1'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
