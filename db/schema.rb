@@ -17,14 +17,17 @@ ActiveRecord::Schema.define(version: 20160801194638) do
   enable_extension "plpgsql"
 
   create_table "projects", force: :cascade do |t|
-    t.string   "title",                                 null: false
-    t.string   "status",         default: "in process"
-    t.string   "technologies"
+    t.string   "title",                                          null: false
+    t.string   "status",                 default: "in progress"
+    t.text     "technologies",                                   null: false
+    t.text     "short_description"
     t.date     "status_date"
-    t.string   "repo"
-    t.string   "page_reference"
-    t.datetime "created_at",                            null: false
-    t.datetime "updated_at",                            null: false
+    t.string   "repo",                                           null: false
+    t.string   "page_reference",                                 null: false
+    t.string   "screenshot",                                     null: false
+    t.string   "screenshot_orientation",                         null: false
+    t.datetime "created_at",                                     null: false
+    t.datetime "updated_at",                                     null: false
   end
 
   create_table "users", force: :cascade do |t|

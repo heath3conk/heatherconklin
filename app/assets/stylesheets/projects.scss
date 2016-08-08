@@ -1,0 +1,43 @@
+.carousel {
+  background: $main-background-color;
+  margin: auto;
+  max-width: 1445px;
+  max-height: 800px;
+  overflow-y: scroll;
+  // text-align: center;
+}
+
+.content-list {
+  max-height: 10%;
+}
+
+.project {
+  color: $main-font-color;
+  font-size: 25px;
+  max-width: 95%;
+  max-height: 30%;
+  border-bottom: 5px solid $main-font-color;
+  margin: 10px 20px 10px 20px;
+}
+
+.image-vertical {
+  margin-top: 10px;
+  max-height: 140px;
+}
+
+.image-horizontal {
+  max-height: 80px;
+}
+
+.project-specifics {
+  background: $main-background-color;
+  margin-left: 12%;
+  width: 75%;
+  max-height: 40%;
+  overflow-y: scroll;
+  padding: 10px;
+}
+
+.project-content {
+  font-size: 20px;
+}
