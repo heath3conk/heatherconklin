@@ -49,6 +49,11 @@ body {
   text-decoration: none;
 }
 
+.content-link:visited {
+  color: $dark-contrast-color;
+  text-decoration: none;
+}
+
 .footer-bar {
   position: absolute;
   bottom: 20px;

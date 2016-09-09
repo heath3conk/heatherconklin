@@ -1,0 +1,36 @@
+<p class="blog-text">Nested forms are great! No, really, they are really fantastic and definitely worth the trouble of figuring out how to make them do what you want. In this post, I'll cover the basic use-case for nested forms and show the steps to implementing them in a Rails app.</p>
+
+<h4 class="blog-subhead">Use case</h4>
+<p class="blog-text">So, when should you use nested forms? If you have two (or more) objects that have a parent-child relationship - in other words, you're not likely to create a parent object without also wanting to create the child object(s) or vice versa - that's when nesting the user input about those objects makes sense.</p>
+
+<p class="blog-text">For example, in the website I made to capture registrations for a charity golf outing, I created a <code>signup</code> object that contained information about the person signing up, such as name, contact information, etc. That's the parent object.</p>
+
+<p class="blog-text">Anyone who was signing up on the website would want to do one of three things at the golf tournament: play golf, attend the dinner or sponsor some part of the event. That's three objects that could be the child of the <code>signup</code> object: <code>player</code>, <code>diner</code> and <code>sponsorship</code>. I didn't want anyone to be able to register as a player, for example, if they had not provided their name and contact information and there would be no point in giving your personal info (as a <code>signup</code>) if you didn't want to play golf, eat dinner or sponsor something. A perfect situation for nested forms.</p>
+
+<div class="row">
+  <div class="col-sm-8 col-md-8 col-lg-8">
+    <h4 class="blog-subhead">Setting up the models</h4>
+    <p class="blog-text">When you create the nested form, the outer part will be the parent object, <code>signup</code> in this example. So your <code>signup</code> model has to be able to recieve and process information for the child objects from that form. Rails refers to these as 'nested attributes.' You'll specify in the parent-object's model for it to do this.</p>
+  </div>
+
+  <div class="col-sm-4 col-md-4 col-lg-4">
+    <%= image_tag "signupNestedAttrib.png", class: "schema" %>
+  </div>
+</div>
+
+<h4 class="blog-subhead">Changes in the controllers</h4>
+<div class="row">
+  <div class="col-sm-4 col-md-4 col-lg-4">
+    <%= image_tag "signupParams.png", class: "schema" %>
+  </div>
+
+  <div class="col-sm-8 col-md-8 col-lg-8">
+    <p class="blog-text">When your form sends the post request to the parent object's controller, it'll have parameters for the child object also. You'll specify all the whitelisted parameters of the child object along with those of the parent in the <code>signup_params</code> private method. (See <%= link_to "this section", "http://api.rubyonrails.org/classes/ActionController/Parameters.html", class: "content-link" %> of the Rails API for more info about whitelisting and why that's important/required.)</p>
+
+    <p class="blog-text">If you take a look at how the parameters are laid out here, you'll notice that it's basically a nested array in which the <code>signup</code> parameters are at the top level (<code>:first_name</code> through <code>:id</code>) and then the various children's information follows: <code>:player_attributes</code>, <code>diners_attributes</code> and <code>sponsorship_attributes</code>, each with its list of params.
+  </div>
+
+</div>
+
+<%= link_to "Rails guide on forms, see the 'nested forms' info in section 9", "http://guides.rubyonrails.org/form_helpers.html", class: "content-link"  %>
+

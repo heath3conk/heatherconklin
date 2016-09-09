@@ -1,0 +1,7 @@
+<div class="project-specifics">
+  <h2  class="blog-title"><%= @blog.title %></h2>
+  <h3><%= @blog.subtitle %></h3>
+  <h4 style="font-style: italic"><%= @blog.updated_at.strftime("%B %d, %Y") %></h4>
+
+  <%= render partial: "#{@blog.page_reference}" %>
+</div>

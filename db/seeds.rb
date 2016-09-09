@@ -38,3 +38,11 @@ Project.create!(
   screenshot: "Voter_bloc.png",
   screenshot_orientation: "horizontal"
   )
+
+Blog.create!(
+  title: "Using Nested Forms in Rails",
+  subtitle: "Why nested forms...why?",
+  page_reference: "nested_forms.html.erb",
+  screenshot: "nest.jpg",
+  screenshot_orientation: 'horizontal'
+  )

@@ -14,5 +14,6 @@ Rails.application.routes.draw do
   get '/projects/show' => 'projects#show'
  
   get '/blogs' => 'blogs#index'
+  get '/blogs/show' => 'blogs#show'
 
 end
