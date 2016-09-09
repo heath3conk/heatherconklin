@@ -1,0 +1,16 @@
+<div class="carousel">
+  <div class="content-list">
+    <% @blogs.each do |blog| %>
+      <div class="project row">
+        <div class= "project-image col-xs-2 col-sm-2 col-md-2 col-lg-2">
+          <%= image_tag("#{blog.screenshot}", class: "image-#{blog.screenshot_orientation}") %>
+        </div>
+        <div class="project-info col-xs-10 col-sm-10 col-md-10 col-lg-10" >
+          <h2><%= link_to "#{blog.title}", blogs_show_path(blog), class: "content-link"  %></h2>
+          <p><%= blog.subtitle %></p>
+          <p class="blog-date"><%= blog.updated_at.strftime("%B %d, %Y") %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
