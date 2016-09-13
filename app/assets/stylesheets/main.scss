@@ -22,6 +22,13 @@ body {
     shades of #9fff7a, #457f3d, #8fe56f, #507f3e
 */
 
+// parent element gets the 'flex' property
+// https://www.youtube.com/watch?v=Y8zMYaD1bz0
+.body-wrapper { 
+  flex: 1;
+  flex-direction: column;
+}
+
 .nav-bar {
   margin-top: 3%;
 }
@@ -56,6 +63,7 @@ body {
 
 .footer-bar {
   position: absolute;
+  float: clear;
   bottom: 20px;
   background: $light-contrast-color;
   height: 12%;
@@ -105,4 +113,9 @@ body {
 
 .bio {
   font-size: 25px;
+}
+
+code {
+  background-color: #e5dfe1;
+  color: $dark-contrast-color;
 }
