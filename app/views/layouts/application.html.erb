@@ -22,22 +22,26 @@
 
 <main>
   <body>
-    <%= yield %>
+    <div class="body-wrapper">
+      <div class="main-content">
+        <%= yield %>
+      </div>
+    </div>
+
+  <footer>
+    <div class="container-fluid footer-bar">
+      <div class="row">
+        <div class="col-lg-12 text-center"><%= link_to "RESUME", asset_path("Resume.pdf"), class: "foot-link" %></div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 text-center"><%= link_to "EMAIL ME", "mailto:heath3conk@gmail.com", class: "foot-link" %></div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 text-center"><%= link_to image_tag("technology.svg"), new_session_path, class: "foot-link" %></div>
+      </div>
+    </div>
+  </footer>
+
   </body>
 </main>
-
-<footer>
-  <div class="container-fluid footer-bar">
-    <div class="row">
-      <div class="col-lg-12 text-center"><%= link_to "RESUME", asset_path("Resume.pdf"), class: "foot-link" %></div>
-    </div>
-    <div class="row">
-      <div class="col-lg-12 text-center"><%= link_to "EMAIL ME", "mailto:heath3conk@gmail.com", class: "foot-link" %></div>
-    </div>
-    <div class="row">
-      <div class="col-lg-12 text-center"><%= link_to image_tag("technology.svg"), new_session_path, class: "foot-link" %></div>
-    </div>
-  </div>
-</footer>
-
 </html>
