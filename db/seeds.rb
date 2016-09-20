@@ -44,5 +44,6 @@ Blog.create!(
   subtitle: "Why nested forms...why?",
   page_reference: "nested_forms.html.erb",
   screenshot: "nest.jpg",
-  screenshot_orientation: 'horizontal'
+  screenshot_orientation: 'horizontal',
+  written_date: Date.new(2016, 9, 9)
   )
