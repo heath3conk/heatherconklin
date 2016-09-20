@@ -9,4 +9,5 @@ class Blog < ActiveRecord::Base
     @blog = Blog.find params[:format]
   end
 
+
 end
