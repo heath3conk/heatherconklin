@@ -1,1 +1,5 @@
-<p class="blog-text">Testing is super important!<%= link_to "Rails guide", "http://guides.rubyonrails.org/form_helpers.html", class: "content-link" %> </p>
+<p class="blog-text">Testing is super important! Everyone knows this and I really, seriously enjoy writing tests. I like figuring out what I should test and how to break down my app into pieces that I can test individually. In spite of these facts, I had not actually written very many tests for my Ruby on Rails apps. Then I thought, 'Hey, THIS is a Rails app! I'll write a bunch of tests for my own website, make sure I know how to test all the different aspects of the app and I'll document it all in a blog." (This is the blog part of that plan.)</p>
+
+<p class="blog-text">The first thing I realized was that the minitest suite that Rails generated automatically is not the same as the Rspec test suite I'm used to. There was already a group in my gem file for gems that should apply for the development and test environments, so I added <code>gem "rspec-rails"</code> to that group and did a fresh <code>bundle install</code>. Then I ran <code>rails generate rspec:install</code> and Rails created a spec folder and a couple of helper files.</p>
+
+<p class="blog-text">(This blog post is in process. I'm updating it as I work through the testing on my site.)</p>
