@@ -44,12 +44,15 @@ Blog.create!(
   subtitle: "Why nested forms...why?",
   page_reference: "nested_forms.html.erb",
   screenshot: "nest.jpg",
-  screenshot_orientation: 'horizontal'
+  screenshot_orientation: 'horizontal',
+  written_date: Date.new(2016, 9, 9)
   )
 
 Blog.create!(
-  title: 'Testing a Rails App with Rspec',
+  title: "Testing a Rails App with Rspec",
   subtitle: "Because it's good for you",
-  page_reference: 'rspec_test_rails.html.erb',
-  screenshot: 'test_graphic.jpg',
-  screenshot_orientation: 'horizontal')
+  page_reference: "rspec_test_rails.html.erb",
+  screenshot: "test_graphic.jpg",
+  screenshot_orientation: "horizontal",
+  written_date: Date.new(2016, 9, 20)
+  )
