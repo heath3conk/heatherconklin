@@ -56,3 +56,12 @@ Blog.create!(
   screenshot_orientation: "horizontal",
   written_date: Date.new(2016, 9, 20)
   )
+
+Blog.create!(
+  title: "Using Flex to Make Things Go Where You Want Them",
+  subtitle: "More effective than just cursing at your screen",
+  page_reference: "add_flex.html.erb",
+  screenshot: "flex-container.png",
+  screenshot_orientation: "horizontal",
+  written_date: Date.new(2016, 9, 21)
+  )
