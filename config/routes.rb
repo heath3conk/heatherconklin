@@ -16,4 +16,6 @@ Rails.application.routes.draw do
   get '/blogs' => 'blogs#index'
   get '/blogs/show' => 'blogs#show'
 
+  get '/picture' => 'picture#index', as: 'picture'
+
 end
