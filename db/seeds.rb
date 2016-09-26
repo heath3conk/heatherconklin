@@ -65,3 +65,12 @@ Blog.create!(
   screenshot_orientation: "horizontal",
   written_date: Date.new(2016, 9, 21)
   )
+
+Blog.create!(
+  title: "Raspberry Pi Project",
+  subtitle: "All the things...",
+  page_reference: "raspberry_pi.html.erb",
+  screenshot: "pie.jpg",
+  screenshot_orientation: "horizontal",
+  written_date: Date.new(2016, 9, 26)
+  )
