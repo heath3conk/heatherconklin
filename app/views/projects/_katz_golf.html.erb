@@ -1,11 +1,11 @@
 <div class="project-content">
   <div class="row">
     <div class="col-sm-8 col-md-8 col-lg-8">
-      <p>I created a website to manage registrations for the Christopher J. Katzenstein 7th Annual Memorial Golf Tournament, taking place on September 17, 2016. Participants can register to play, attend the dinner or sponsor the event. I deployed the site on Heroku (so there's a long load time if it's sleeping) and the organizers got the URL from GoDaddy and directed it there.</p>
+      <p>I created a website to manage registrations for the Christopher J. Katzenstein 7th Annual Memorial Golf Tournament, which took place on September 17, 2016. Participants can register to play, attend the dinner or sponsor the event. I deployed the site on Heroku (so there's a long load time if it's sleeping) and the organizers got the URL from GoDaddy and directed it there.</p>
       <p><%= link_to "www.ckatzgolf.com", "www.ckatzgolf.com", class: "content-link" %></p>
       <p>This is, in general, a pretty straightforward app. There's a user model so the organizers can login and view signup information. This schema illustrates the relationships among the models related to the registrations.</p>
 
-      <p>I nested the specific type of registration under the general model "signup" so that I'd have one place to gather the registrant's name and contact information that was common to all. I created a nested form and used the nav-bar links to generate the correct fields for the child-model (player, diner or sponsorship).</p>
+      <p>I nested the specific type of registration under the general model "signup" so that I'd have one place to gather the registrant's name and contact information that was common to all. I created a nested form and used the nav-bar links to generate the correct fields for the child-model (player, diner or sponsorship). Please see <%= link_to "my blog about nested forms", "/blogs/show.1", class: "content-link" %> for more details about how that works with Rails.</p>
     </div>
     <div class="col-sm-4 col-md-4 col-lg-4">
       <%= image_tag "katz_golf_schema.png", class: "schema" %>
