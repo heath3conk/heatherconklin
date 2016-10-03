@@ -27,6 +27,7 @@ body {
 .body-wrapper { 
   width: 100%;
   margin: 0 auto;
+  margin-top: 20px;
 }
 
 .flex-container {
@@ -126,6 +127,12 @@ body {
   padding: 5px;
   padding-top: 15px;
   padding-bottom: 10px;
+  
+}
+
+.picture-info {
+  overflow-y: scroll;
+  height: 25%;
 }
 
 .bio {
