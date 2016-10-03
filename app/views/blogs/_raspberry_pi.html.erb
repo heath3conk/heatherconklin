@@ -1,15 +1,40 @@
-<p class="blog-text">I'm just getting started on this project so this blog is currently a list of things I need to figure out to make it work:</p>
+<p class="blog-text">I'm just getting started on this project so this blog is currently a list of things I need to figure out to make it work. I'll fill in details as I complete each step.</p>
+
+<p class="blog-text">This is what I have to do:</p>
 
 <ul>
-  <li>Installing the raspberry pi OS on this miniSD card (they are <span style="font-style:italic">not kidding</span> with that 'mini').</li>
-  <p class="blog-text">Spent the last couple of days mentoring at Dev Bootcamp so not a lot of progress...so far I've been downloading the Raspbian OS and formatting the SD card.</p>
-  <li>Making the raspberry pi connect to the wifi here at home. (This looks like it'll be pretty easy, but it's a step in the process so it goes on the list.)</li>
-  <li>Installing the camera</li>
-  <li>Figuring out how to trigger the camera to take a picture and store the image</li>
-  <li>Figuring out how to interpret the image</li>
-  <li>Figuring out how to turn the raspberry pi into a web server</li>
-  <li>Setting up the website</li>
-  <li>DEPLOY</li>
+  <li>Install the raspberry pi OS on this miniSD card (they are <span style="font-style:italic">not kidding</span> with that 'mini').</li>
+    <p class="blog-text">Spent the last couple of days mentoring at Dev Bootcamp so not a lot of progress...so far I've been downloading the Raspbian OS and formatting the SD card. It took a couple of attempts at downloading the operating system's zip file before I could successfully extract the files to the SD card.</p>
+    
+    <p class="blog-text">Once I got the SD card set up, I plugged that into its slot on the RPi, then connected the all the other hardware to the RPi: keyboard, mouse, HDMI cable. I connected the HDMI cable to my tv and then, finally, plugged in the power adapter for the RPi.</p>
+
+    <p class="blog-text">Seeing 'Welcome to PIXEL Powered by Raspbian' on my tv screen was a nice moment. Among other things, it made me crave a larger monitor for my day-to-day computer use.</p>
+    
+  <li>Make the raspberry pi connect to the wifi here at home. (This looks like it'll be pretty easy, but it's a step in the process so it goes on the list.)</li>
+
+    <p class="blog-text">As usual, 'looks easy' was...not quite an accurate assessment.</p>
+
+    <p class="blog-text">The USB wifi dongle did detect my wifi right away but I had no real way to see that at first. I found some step-by-step instructions <%= link_to "here", "https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md", class: "content-link" %> and <%= link_to "here", "https://learn.adafruit.com/adafruits-raspberry-pi-lesson-3-network-setup/setting-up-wifi-with-occidentalis", class: "content-link" %>. As with all the other things plugged into the RPi, the wifi adapter has to be in the USB port before powering up.</p>
+
+    <p class="blog-text">The first thing was to confirm that the RPi was detecting my wifi. From the command line, I checked that: <code>sudo iwlist wlan0 scan</code>. This gave me a list of all the local wifi networks. I live in a condo building in the city, so there were quite a few. There was a lot of data (mostly meaningless to me and, for my current purpose, extraneous) in these results but it was divided into 'channels' and my network was listed as <code>ESSID: "my network name"</code> for one of them.</p>
+
+    <p class="blog-text">Next, I had to configure this "wlan0" with my wifi password. From the command line, I opened the 'interfaces' file: <code>sudo nano /etc/network/interfaces</code>and changed it per step 3 in the second link above. I haven't had to make any changes to my 'wpa-supplicant' file so far.</p>
+
+  <div class="row">
+    <div class="col-sm-4 col-md-4 col-lg-4">
+      <%= image_tag "raspberry_cat.jpg", class: "schema code-snapshot" %>
+    </div>
+
+    <div class="col-sm-8 col-md-8 col-lg-8">
+      <li>Install the camera & figure out how to trigger it to take a picture and store the image</li>
+
+        <p class="blog-text">This one actually was easy. I went through <%= link_to "this tutorial", "https://www.raspberrypi.org/learning/getting-started-with-picamera/", class: "content-link"%> and everything worked on the very first try. Crazy. This is a picture of my cat, Edgar, wondering why I'm sitting on the floor in front of my tv and not scratching his head.</p>
+     
+      <li>Figure out how to interpret the image</li>
+      <li>Figure out how to turn the raspberry pi into a web server</li>
+      <li>Set up the website</li>
+      <li>DEPLOY</li>
+    </div>
 </ul>
 
 <p class="blog-text">Should be fun.</p>
